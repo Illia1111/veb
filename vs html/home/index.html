@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life-hacks</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='static/style.css')}}">
+</head>
+<body>
+    <main>
+        {%for item in list%}
+        <div>
+        <img src="static/{{item[1]}}" alt="">
+        <h1>{{item[2]}}</h1>
+        <a href="/{{item[0]}}"><button class="btn">Перейти</button></a>
+        </div>
+        {%endfor%}  
+        <div>
+            <a href="/home"><button class="hm">Головна</button></a>
+        </div>
+    </main>
+
+
+    
+
+</body>
+</html>
